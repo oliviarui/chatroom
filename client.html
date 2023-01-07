@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="chatroom.css">
+        <title>Chat Room</title>
+   </head>
+   <body>
+        <div id="username-box">
+            <h1>Enter a nickname</h1>
+            <p>This will be the name displayed to everyone else when you enter a chatroom</p>
+            <input type="text" id="username">
+            <button id="set-username">confirm</button>
+        </div>
+        <!-- box for displaying success/kick messages to users -->
+        <div id="info-box">
+            <p id="info"></p>
+            <p id="info-2"></p>
+        </div>
+        <p id="current-user"></p>
+        <div id="box-1">
+            <div id="create-room-box">
+                <h1>Create a Room</h1>
+                <label for="create-room-name">Enter the name of your new room</label>
+                <input type="text" id="create-room-name">
+                <br>
+                <label for="private">Check this box to create a private room</label>
+                <input type="checkbox" id="private">
+                <br>
+                <button id="create-room-button">create</button>
+            </div>
+            <div id="join-room-box">
+                <h1>Join a Room</h1>
+                <label for="join-room-id">Enter the room ID of the room you would like to join</label>
+                <input type="text" id="join-room-id">
+                <br>
+                <button id="join-room-button">join</button>
+                <div id="password-box">
+                    <label for="join-room-password">This is a private room, please enter the password: </label>
+                    <input type="text" id="join-room-password">
+                    <br>
+                    <button id="password-button">submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="chatroom-info">
+            <div id="room-info">
+                <h1 id="room-name">Main Lobby</h1>
+                <p id="room-id">Room ID: </p>
+                <p id="room-password">Room Password: </p>
+                <p>Users currently in this room:</p>
+                <ul id="user-list"></ul>
+            </div>
+            <div id="room-owner-box">
+                <h1>Admin Actions</h1>
+                <h3>Kick out a user</h3>
+                <p>Kicking out a user is temporary and they will be able to rejoin this room</p>
+                <input type="text" id="kick-user">
+                <button id="kick-button">kick out user</button>
+
+                <h3>Ban a user</h3>
+                <p>Banning a user will mean they can never rejoin this room</p>
+                <input type="text" id="ban-user">
+                <button id="ban-button">ban user</button>
+
+                <h3>Add Room Owner</h3>
+                <p>Give another user admin privileges in this room</p>
+                <input type="text" id="add-owner">
+                <button id="add-owner-button">add owner</button>
+            </div>
+        </div>
+        
+        <div id="chatroom">   
+            <div id="send-messages-box">
+                <h1>Send Messages</h1>
+                <h3>Select Message Importance</h3>
+                <input type="radio" name="message-import" id="import-default">
+                <label for="import-default"><span id="default-span" class="import-span">default</span> importance</label>
+                <br>
+                <input type="radio" name="message-import" id="import-med">
+                <label for="import-med"><span id="med-span" class="import-span">medium</span> importance</label>
+                <br>
+                <input type="radio" name="message-import" id="import-high">
+                <label for="import-high"><span id="high-span" class="import-span">high</span> importance</label>
+    
+                <h3>Send Public Message</h3>
+                <label for="message_input">message:</label>
+                <input type="text" id="message_input">
+                <button id="send-button">send</button>
+    
+                <h3>Send <span id="priv-span">Private</span> Message</h3>
+                <label for="private-message-receiver">recipient: </label>
+                <input type="text" id="private-message-receiver">
+                <br>
+                <label for="private-message-input">message:</label>
+                <input type="text" id="private-message-input">
+                <button id="send-private-button">send</button>
+            </div>     
+            <div id="chatlog"></div>
+        </div>
+        <script src ="client.js"></script>
+   </body>
+</html>

@@ -1,0 +1,151 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* everything that needs to be hidden in the beginning */
+#create-room-box, #join-room-box, #chatroom, #chatroom-info, #password-box, #room-owner-box, #room-password, #current-user {
+    display: none;
+}
+
+body {
+    background-color: #474F35;
+    margin: 0;
+}
+
+div {
+    border-radius: 10px;
+}
+
+button {
+    background-color: #588157;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input {
+    margin-top: 5px;
+}
+
+#username-box {
+    background-color: #6C584C;
+    width: 400px;
+    height: 250px;
+    padding: 20px;
+    margin: 50px auto;
+    color: #FEFAE0;
+}
+
+#current-user, #info-box {
+    display: none;
+    margin: 10px auto;
+    width: 1000px;
+    height: 30px;
+    font-size: larger;
+    text-align: center;
+    background-color: #DDE5B6;
+    border-radius: 10px;
+}
+
+#box-1 {
+    width: 1000px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#create-room-box, #join-room-box {
+    background-color: #ADC178;
+    width: 400px;
+    height: 250px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#room-info, #room-owner-box {
+    background-color: #CCD5AE;
+    width: 500px;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+#user-list {
+    border: #FEFAE0 dotted 3px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+}
+
+#chatroom {
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    margin: 10px auto;
+}
+
+#send-messages-box {
+    width: 350px;
+    height: 700px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ADC178;
+}
+
+#chatlog {
+    width: 550px;
+    padding: 10px;
+    height: 700px;
+    margin: 10px;
+    border: 10px;
+    background-color: #CCD5AE;
+    overflow: scroll;
+}
+
+.message {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fefae0;
+}
+
+.med-importance {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #a98467;
+}
+
+.high-importance {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #4d1b0f;
+    color: #FEFAE0;
+}
+
+span {
+    background-color: #CCD5AE;
+    padding: 5px;
+    border-radius: 5px;
+}
+.import-span {
+    padding: 2px;
+    border-radius: 2px;
+}
+#default-span {
+    background-color: #fefae0;
+}
+#med-span {
+    background-color: #a98467;
+}
+#high-span {
+    background-color: #4d1b0f;
+    color: #FEFAE0;
+}
+#priv-span {
+    background-color: #CCD5AE;
+}
+
+.private {
+    border: dotted 3px #CCD5AE;
+}
